@@ -1,0 +1,16 @@
+.idea/
+.vscode/
+app/**/*.js
+app/**/*.map
+hooks/
+lib/
+node_modules/
+platforms/
+tmp/
+typings/
+built
+tags
+.baseDir.ts
+.tscache
+lib
+*.tgz
