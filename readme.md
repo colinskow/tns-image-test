@@ -2,6 +2,10 @@
 
 This contains two tests which confirm memory leak bugs in NativeScript/Android when swapping between two images or changing routes among image intensive pages.
 
+### Github Issue
+
+See the [discussion here](https://github.com/NativeScript/NativeScript/issues/2571).
+
 ### How To Run
 
 ```bash
