@@ -1,0 +1,8 @@
+<DockLayout stretchLastChild="true">
+  <StackLayout class="bottom" dock="bottom">
+    <Label class="counter" [text]="counter" *ngIf="!passed"></Label>
+    <Button class="passed" text="Test Passed!" [nsRouterLink]="['/']" *ngIf="passed"></Button>
+  </StackLayout>
+
+  <Image #image [src]="src" stretch="aspectFill" dock="left"></Image>
+</DockLayout>

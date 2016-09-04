@@ -2,18 +2,53 @@
     horizontal-align: center;    
 }
 
-button {
-    font-size: 36;
+StackLayout.menu {
+    margin: 32; 
+    padding: 16;
+    border-width: 4;
+    border-color: greenyellow; 
+    border-radius: 16;
 }
 
-.title {
-    font-size: 30;
-    margin: 20;
+.menu Button {
+    height: 64;
+    font-size: 32;
+    color: white;
+    background-color: black;
+    padding-left: 8;
+    padding-right: 8;
+    border-radius: 8;
+    border-width: 2;
+    border-color: orange;
+    margin-top: 16;
+    margin-bottom: 16;
 }
 
-.message {
-    font-size: 20;
-    color: #284848;
-    text-align: center;
-    margin: 0 20;
-} 
+Label.counter {
+    color: white; 
+    background-color: black; 
+    text-align: center; 
+    width: 100%; 
+    height: 64;
+    font-size: 48;
+}
+
+Button.passed {
+    font-size: 24;
+    border-width: 2;
+    border-radius: 8;
+    background-color: black;
+    border-color: greenyellow;
+    color: white;
+    padding-left: 8;
+    padding-right: 8;
+    height: 56;
+    margin: 4;
+    min-width: 80%;
+}
+
+StackLayout.bottom {
+    width: 100%;
+    height: 64;
+    background-color: black;
+}
