@@ -26,3 +26,11 @@ When the image component loads an image from a file, resource or URL it must rec
 A possible cause is poor coding in the Android runtime which is storing hard references to each image, thus preventing their release.
 
 I am working on a PR to the `ui/image` component which forces it to recycle the bitmaps everytime the source is updated or the image component gets unloaded. This only affects files, images, and URLs loaded in the "src" attribute. Native images or existing image sources passed in will not be recycled, since these are likely to be resused elsewhere.
+
+### Automated Unit Tests
+
+These tests should be part of the automated test suite, but I don't know how to do that so I would appreciate any help in that direction.
+
+### iOS Tests
+
+I haven't gotten around to running these to see if they pass on iOS. If somebody tries before I do please open an issue to let me know!
