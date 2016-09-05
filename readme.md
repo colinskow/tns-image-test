@@ -34,3 +34,7 @@ These tests should be part of the automated test suite, but I don't know how to 
 ### iOS Tests
 
 I haven't gotten around to running these to see if they pass on iOS. If somebody tries before I do please open an issue to let me know!
+
+### Image Credits
+
+All images used were downloaded from [PixaBay.com](https://pixabay.com) and are released free of copyrights under [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/).

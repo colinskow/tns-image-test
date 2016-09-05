@@ -3,6 +3,7 @@ import {NS_ROUTER_DIRECTIVES} from "nativescript-angular/router";
 import {Page} from "ui/page";
 import {Image} from "ui/image";
 import {recycleImage} from "./recycle";
+import {ImageService} from "./image.service";
 
 @Component({
   selector: "loop-test",
@@ -10,12 +11,11 @@ import {recycleImage} from "./recycle";
   directives: [NS_ROUTER_DIRECTIVES]
 })
 export class LoopTestPage implements OnInit {
-  src: string;
+  src: any;
   counter: number = 0;
-  index = 0;
   passed: boolean = false;
 
-  constructor(private page: Page) {}
+  constructor(private page: Page, protected imageService: ImageService) {}
 
   ngOnInit() {
     this.page.actionBarHidden = true;
@@ -24,11 +24,23 @@ export class LoopTestPage implements OnInit {
 
   testLoop() {
     let loop = () => {
-      // Uncomment this next line to make the test pass
-      // recycleImage(this.imageElem);
-      this.src = '~/img/' + ((this.index++) == 0 ? 'image01.jpg' : 'image02.jpg');
-      if (this.index > 1) {
-        this.index = 0;
+      var index: number = this.counter % 3;
+      // Uncomment this next block to make the test pass
+      // Note: we don't want to recycle the native image (index 0) since it is reused.
+      /* if(index > 0) {
+        recycleImage(this.imageElem);
+      } */
+      switch(index) {
+        case 0:
+          // We are including a pre-loaded image in the test to make sure it is never 
+          // recycled by the Image component
+          this.src = this.imageService.image;
+          break;
+        case 1:
+          this.src = '~/img/image02.jpg';
+          break;
+        case 2:
+          this.src = '~/img/image03.jpg';
       }
       this.counter++;
       if(this.counter < 500) {

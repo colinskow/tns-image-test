@@ -19,7 +19,6 @@ export class MenuPage implements OnInit {
     constructor(private page: Page) {}
 
     ngOnInit() {
-        console.log('loaded!');
         this.page.actionBarHidden = true;
     }
 }
